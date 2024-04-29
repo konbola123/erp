@@ -234,5 +234,31 @@ return 0;
 
 ##############@@@@@@@@@ -FCFS Disk scheduling algorithm
 
+#include<stdio.h>
+#include<math.h>
+#include<stdlib.h>
+int main()
+{
+int cp,n,req[50],i,mov=0;
+printf("Enter the current position");
+scanf("%d",&cp);
+printf("Enter the number of requests");
+scanf("%d",&n);
+printf("Enter the order of requests ");
+for(i=0;i<n;i++)
+{
+scanf("%d",&req[i]);
+}
+mov= mov+abs(cp-req[i]);
+scanf("%d%d",cp,req[i]);
+for(i=1;i<n;i++)
+{
+mov = mov + abs(req[i]-req[i-1]);
+scanf("%d",&req[i]);
+}
+printf("\n");
+printf("total head movements : %d", mov);
+}
+
 
 
